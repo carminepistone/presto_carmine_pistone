@@ -1,4 +1,4 @@
-<form class="bg-body-tertiary shadow rounded p-5 my-5" wire:submit="store">
+<form class="bg-body-tertiary shadow rounded p-5 my-5" wire:submit="save">
     <div class="mb-3">
         <label for="title" class="form-label">Titolo:</label>
         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" wire:model.blur="title">

@@ -49,6 +49,17 @@
                                 <li>
                                     <a class="dropdown-item" href="{{ route('create.article')}}">Crea un articolo</a>
                                 </li>
+                                    @if (Auth::user()->is_revisor)
+                                        <li class="nav-item">
+                                            <a class="dropdown-item text-success position-relative"
+                                                href="{{ route('revisor.index') }}">
+                                                Zona revisore
+                                                <span class="position-absolute top-50 end-0 translate-middle-y badge rounded-pill bg-danger mx-2">
+                                                    {{ \App\Models\Article::toBerevisedCount() }}
+                                                </span>
+                                            </a>
+                                        </li>
+                                    @endif
                                 <li>
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
