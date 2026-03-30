@@ -16,18 +16,22 @@
             </div>
         </div>
         @endif
-        @if ($article_to_check)
-            <div class="row justify-content-center pt-5">
-                <div class="col-md-8">
-                    <div class="row justify-content-center">
-                        @for ($i = 0; $i < 6; $i++)
-                            <div class="col-6 col-md-4 mb-4 text-center">
-                                <img src="https://picsum.photos/300"
-                                    class="img-fluid rounded shadow"
-                                    alt="{{ __('ui.placeholder_image') }}"
-                                >
-                            </div>
-                        @endfor
+
+            @if ($article_to_check->images->count())
+                @foreach ($article_to_check->images as $key => $image)
+                    <div class="col-6 col-md-4 mb-4">
+                        <img src="{{ Storage::url($image->path) }}" class="img-fluid rounded shadow" 
+                            alt="Immagine {{ $key + 1 }} dell'articolo '{{ $article_to_check->title }}'">
+                    </div>
+                @endforeach
+            @else
+                @for ($i = 0; $i < 6; $i++)
+                    <div class="col-6 col-md-4 mb-4 text-center">
+                        <img src="https://picsum.photos/300" alt="immagine segnaposto" 
+                            class="img-fluid rounded shadow">
+                    </div>
+                @endfor
+            @endif
                     </div>
                 </div>
                 <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">

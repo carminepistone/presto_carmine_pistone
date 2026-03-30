@@ -2,3 +2,11 @@
     width: 18rem;
     height: 100%;
 }
+
+.img-preview{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 120px;
+}
