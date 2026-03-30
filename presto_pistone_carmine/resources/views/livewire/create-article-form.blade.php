@@ -1,13 +1,13 @@
 <form class="bg-body-tertiary shadow rounded p-5 my-5" wire:submit="save">
     <div class="mb-3">
-        <label for="title" class="form-label">Titolo:</label>
+        <label for="title" class="form-label">{{ __('ui.title') }}:</label>
         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" wire:model.blur="title">
         @error('title')
             <p class="fst-italic text-danger">{{ $message }}</p>
         @enderror
     </div>
     <div class="mb-3">
-        <label for="description" class="form-label">Descrizione:</label>
+        <label for="description" class="form-label">{{ __('ui.description') }}:</label>
         <textarea id="description" cols="30" rows="10"
             class="form-control @error('description') is-invalid @enderror" wire:model.blur="description"></textarea>
         @error('description')
@@ -15,7 +15,7 @@
         @enderror
     </div>
     <div class="mb-3">
-        <label for="price" class="form-label">Prezzo:</label>
+        <label for="price" class="form-label">{{ __('ui.price') }}:</label>
         <input type="text" class="form-control @error('price') is-invalid @enderror" id="price"
             wire:model.blur="price">
         @error('price')

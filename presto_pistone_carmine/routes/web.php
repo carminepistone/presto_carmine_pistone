@@ -9,7 +9,7 @@ Route::get('/', [PublicController::class,'homepage'])->name('homepage');
 
 
 // Rotte Article
-Route::get('/create', [ArticleController::class, 'create'])->name('create.article')->middleware('auth');
+Route::get('/create/article', [ArticleController::class, 'create'])->name('create.article')->middleware('auth');
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 
@@ -26,3 +26,7 @@ Route::get('make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->na
 
 // Rotte Ricerca
 Route::get('search/article', [PublicController::class, 'searchArticles'])->name('article.search');
+
+
+// Rotta cambio lingua
+Route::post('/lingua/{lang}', [PublicController::class,'setLanguage'])->name('setLocale');

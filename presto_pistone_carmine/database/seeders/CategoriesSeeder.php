@@ -8,18 +8,18 @@ use App\Models\Category;
 
 class CategoriesSeeder extends Seeder
 {
-       public $categories = [
-        'Elettronica',
-        'Abbigliamento',
-        'Salute e Bellezza',
-        'Casa e Giardinaggio',
-        'Giocattoli',
-        'Sport',
-        'Animali Domestici',
-        'Libri e Riviste',
-        'Accessori',
-        'Motori'
-        ];
+public $categories = [
+    'elettronica',
+    'abbigliamento',
+    'salute_e_bellezza',
+    'casa_e_giardinaggio',
+    'giocattoli',
+    'sport',
+    'animali_domestici',
+    'libri_e_riviste',
+    'accessori',
+    'motori'
+];
 
     /**
      * Seed the application's database.
