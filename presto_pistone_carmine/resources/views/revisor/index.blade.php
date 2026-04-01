@@ -16,16 +16,63 @@
                 </div>
             </div>
         @endif
-        @if ($article_to_check)                         {{-- ✅ CHECK RIPRISTINATO --}}
+        @if ($article_to_check)
             <div class="row justify-content-center pt-5">
                 <div class="col-md-8">
                     <div class="row justify-content-center">
                         @if ($article_to_check->images->count())
                             @foreach ($article_to_check->images as $key => $image)
-                                <div class="col-6 col-md-4 mb-4">
+                                <div class="col-md-4 mb-4">
                                     <img src="{{ $image->getUrl(300,300) }}"
                                         class="img-fluid rounded shadow"
                                         alt="Immagine {{ $key + 1 }} dell'articolo '{{ $article_to_check->title }}'">
+                                </div>
+                                <div class="col-md-3 ps-3">
+                                    <div class="card-body">
+                                        <h5>Labels</h5>
+                                        @if ($image->labels)
+                                            @foreach ($image->labels as $label)
+                                                #{{ $label }},
+                                            @endforeach
+                                        @else
+                                            <p class="fst-italic">No labels</p>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-md-5 ps-3">
+                                    <div class="card-body">
+                                        <h5>Ratings</h5>
+                                        <div class="row justify-content-center">
+                                            <div class="col-2">
+                                                <i class="{{ $image->adult }}"></i>
+                                            </div>
+                                            <div class="col-10">adult</div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-2">
+                                                <i class="{{ $image->violence }}"></i>
+                                            </div>
+                                            <div class="col-10">violence</div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-2">
+                                                <i class="{{ $image->spoof }}"></i>
+                                            </div>
+                                            <div class="col-10">spoof</div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-2">
+                                                <i class="{{ $image->racy }}"></i>
+                                            </div>
+                                            <div class="col-10">racy</div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-2">
+                                                <i class="{{ $image->medical }}"></i>
+                                            </div>
+                                            <div class="col-10">medical</div>
+                                        </div>
+                                    </div>
                                 </div>
                             @endforeach
                         @else
@@ -37,8 +84,8 @@
                                 </div>
                             @endfor
                         @endif
-                    </div>                              {{-- ✅ chiude row justify-content-center --}}
-                </div>                                  {{-- ✅ chiude col-md-8 --}}
+                    </div>
+                </div>
                 <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
                     <div>
                         <h1>{{ $article_to_check->title }}</h1>
@@ -59,8 +106,8 @@
                             <button class="btn btn-success py-2 px-5 fw-bold">{{ __('ui.accept') }}</button>
                         </form>
                     </div>
-                </div>                                  {{-- ✅ chiude col-md-4 --}}
-            </div>                                      {{-- ✅ chiude row justify-content-center pt-5 --}}
+                </div>
+            </div>
         @else
             <div class="row justify-content-center align-items-center height-custom text-center">
                 <div class="col-12">
