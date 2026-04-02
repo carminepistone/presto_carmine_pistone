@@ -41,7 +41,7 @@
                 @endif
 
                 <div class="d-grid mt-4">
-                    <button type="submit" class="btn btn-primary btn-lg">
+                    <button type="submit" class="btn btn-account">
                         {{ __('ui.sign_up') }}
                     </button>
                 </div>
@@ -51,7 +51,7 @@
             <div class="text-center mt-3">
                 <small class="text-muted">
                     {{ __('ui.no_account') }} 
-                    <a href="{{ route('register') }}" class="text-decoration-none fw-semibold">
+                    <a href="{{ route('register') }}" class="text-decoration-none special-text fw-semibold">
                         {{ __('ui.register') }}
                     </a>
                 </small>

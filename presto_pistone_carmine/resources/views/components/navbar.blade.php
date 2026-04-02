@@ -1,6 +1,9 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
+<nav class="navbar navbar-expand-lg nav-custom shadow fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="{{ route('homepage') }}">PRESTO</a>
+        <a class="navbar-brand fw-bold" href="{{ route('homepage') }}">
+
+            <img src="{{ asset('img/logo_navbar.png') }}" alt="Logo Presto.it" width="99" height="34" class="d-inline-block align-text-top">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,12 +40,11 @@
                     </ul>
                 </li>
 
-                {{-- Dropdown Account/Auth --}}
+                {{-- Dropdown Account --}}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         @auth
-                            {{-- Nota: Ho usato 'Ciao' statico + nome, dato che nel tuo file 'hello' non c'era, 
-                                 oppure puoi usare una stringa personalizzata --}}
+
                             Ciao, {{ Auth::user()->name }}
                         @else
                             {{ __('ui.hello_guest') }}
@@ -87,7 +89,7 @@
             <form class="d-flex" role="search" action="{{ route('article.search') }}" method="GET">
                 <div class="input-group">
                     <input type="search" name="query" class="form-control" placeholder="{{ __('ui.search_placeholder') }}" aria-label="search">
-                    <button type="submit" class="btn btn-outline-success">
+                    <button type="submit" class="btn btn-warning">
                         {{ __('ui.search') }}
                     </button>
                 </div>

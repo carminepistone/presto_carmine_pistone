@@ -1,8 +1,8 @@
 <x-layout>
     <div class="container">
         <div class="row py-5 justify-content-center align-items-center text-center">
-            <div class="col-12 pt-5">
-                <h1 class="display-2">
+            <div class="col-12 bg-all">
+                <h1 class="display-3">
                     {{ __('ui.categories') }}: 
                     <span class="fst-italic fw-bold">
                         {{ __("ui." . $category->name) }}
@@ -10,14 +10,14 @@
                 </h1>
             </div>
         </div>
-        <div class="row height-custom justify-content-center align-items-center py-5">
+        <div class="row height-custom justify-content-center align-items-center  ">
             @forelse ($articles as $article)
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-3 bg-all">
                     <x-card :article="$article" />
                 </div>
             @empty
-                <div class="col-12 text-center">
-                    <h3>
+                <div class="col-12 text-center bg-all">
+                    <h3 >
                         {{ __('ui.no_articles') }}
                     </h3>
                     @auth

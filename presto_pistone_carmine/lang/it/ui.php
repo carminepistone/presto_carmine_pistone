@@ -26,6 +26,7 @@ return [
 
 
     //Account
+    'welcome'=> 'Benvenuto',
     'account_create'=> 'Crea un Account',
     'user_name'=> 'Nome',
     'password_confirmation'=> 'Conferma Password',
@@ -47,6 +48,7 @@ return [
     'motori'              => 'Motori',
     'salute_e_bellezza'   => 'Salute e Bellezza',
     'sport'               => 'Sport',
+    'category'=> 'Categoria',
 
     // Ricerca
     'search_results'      => 'Risultati per la ricerca',

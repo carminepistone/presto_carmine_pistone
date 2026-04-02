@@ -6,12 +6,12 @@
         <h6 class="card-subtitle text-body-secondary">{{ $article->price }} €</h6>
         <div class="d-flex justify-content-evenly align-items-center mt-5">
             {{-- Pulsante Dettaglio --}}
-            <a href="{{ route('article.show', compact('article')) }}" class="btn btn-primary">
+            <a href="{{ route('article.show', compact('article')) }}" class="btn btn-create">
                 {{ __('ui.detail') }}
             </a>
             
             {{-- Pulsante Categoria (Tradotto Dinamicamente) --}}
-            <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-outline-info">
+            <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-category">
                 {{ __("ui." . $article->category->name) }}
             </a>
         </div>

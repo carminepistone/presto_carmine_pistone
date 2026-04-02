@@ -1,13 +1,13 @@
-<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+<footer class="text-center text-lg-start footer-custom text-muted vw-100">
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
   </section>
   <section class="">
-    <div class="container text-center text-md-start mt-5">
+    <div class="container text-center text-md-start mt-5 footer-elements">
       <div class="row mt-3">
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-md-start">
           <h5 class="text-uppercase fw-bold mb-4">{{ __('ui.became_revisor') }}</h5>
           <p>{{ __('ui.please_click') }}</p>
-          <a href="{{ route('become.revisor') }}" class="btn btn-success">{{ __('ui.revisor_button') }}</a>
+          <a href="{{ route('become.revisor') }}" class="btn btn-revisor">{{ __('ui.revisor_button') }}</a>
         </div>
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <h6 class="text-uppercase fw-bold mb-4">{{ __('ui.useful_links') }}</h6>
@@ -20,13 +20,13 @@
           <p><i class="fas fa-home me-3"></i> Casoria NA 80026, IT</p>
           <p><i class="fas fa-envelope me-3"></i> info@presto.it</p>
           <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+
         </div>
       </div>
     </div>
   </section>
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+  {{-- <div class="text-center p-4" style="background-color: ;">
     © 2026
-    <a class="text-reset fw-bold" href="http://127.0.0.1:8000/">Presto.it</a>
-  </div>
+    <a class="text-reset text-white fw-bold" href="http://127.0.0.1:8000/">Presto.it</a>
+  </div> --}}
 </footer>

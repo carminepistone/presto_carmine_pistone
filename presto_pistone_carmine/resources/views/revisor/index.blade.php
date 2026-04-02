@@ -1,9 +1,18 @@
 <x-layout>
+        @push('style')
+    <style>
+        body {
+            background-image: url("{{ asset('img/revisor_bg.jpg') }}") !important;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+    @endpush
     <div class="container-fluid pt-5">
-        <div class="row">
+        <div class="row justify-content-center mt-5">
             <div class="col-3">
                 <div class="rounded shadow bg-body-secondary">
-                    <h1 class="display-5 text-center pb-2">
+                    <h1 class="display-5 text-center revisor-div pb-2">
                         {{ __('ui.revisor_log') }}
                     </h1>
                 </div>
@@ -28,7 +37,7 @@
                                         alt="Immagine {{ $key + 1 }} dell'articolo '{{ $article_to_check->title }}'">
                                 </div>
                                 <div class="col-md-3 ps-3">
-                                    <div class="card-body">
+                                    <div class="card-body labels-box">
                                         <h5>Labels</h5>
                                         @if ($image->labels)
                                             @foreach ($image->labels as $label)
@@ -39,8 +48,9 @@
                                         @endif
                                     </div>
                                 </div>
-                                <div class="col-md-5 ps-3">
-                                    <div class="card-body">
+
+                                <div class="col-md-5 ps-3 ">
+                                    <div class="card-body ratings-box">
                                         <h5>Ratings</h5>
                                         <div class="row justify-content-center">
                                             <div class="col-2">
@@ -74,6 +84,8 @@
                                         </div>
                                     </div>
                                 </div>
+
+
                             @endforeach
                         @else
                             @for ($i = 0; $i < 6; $i++)
@@ -86,7 +98,7 @@
                         @endif
                     </div>
                 </div>
-                <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
+                <div class="col-md-4 d-flex flex-column justify-content-between box-article">
                     <div>
                         <h1>{{ $article_to_check->title }}</h1>
                         <h3>{{ __('ui.author') }}: {{ $article_to_check->user->name }}</h3>
@@ -114,7 +126,7 @@
                     <h1 class="fst-italic display-4">
                         {{ __('ui.no_revision') }}
                     </h1>
-                    <a href="{{ route('homepage') }}" class="mt-5 btn btn-success">{{ __('ui.back.homepage') }}</a>
+                    <a href="{{ route('homepage') }}" class="mt-5 btn btn-home">{{ __('ui.back.homepage') }}</a>
                 </div>
             </div>
         @endif

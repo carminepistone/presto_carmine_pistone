@@ -1,11 +1,20 @@
 <x-layout>
+    @push('style')
+    <style>
+        body {
+            background-image: url("{{ asset('img/create_article_bg.jpg') }}") !important;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+    @endpush
     <div class="container pt-5">
-        <div class="row justify-content-center">
+        {{-- <div class="row justify-content-center">
             <div class="col-12 text-center">
                 <h1 class="display-4 pt-5">
                     {{ __('ui.publish_article') }}
                 </h1>
-            </div>
+            </div> --}}
         </div>
         <div class="row justify-content-center align-items-center height-custom">
             <div class="col-12 col-md-6 ">

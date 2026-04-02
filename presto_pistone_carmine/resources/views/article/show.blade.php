@@ -1,6 +1,15 @@
 <x-layout>
+        @push('style')
+    <style>
+        body {
+            background-image: url("{{ asset('img/show_bg.jpg') }}") !important;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+    @endpush
     <div class="container">
-        <div class="row height-custom justify-content-center align-items-center text-center">
+        <div class="row justify-content-center align-items-center text-center mt-5 py-5">
             <div class="col-12">
                 <h1 class="display-4">{{ __('ui.article_detail') }}: {{ $article->title }}</h1>
             </div>
@@ -19,8 +28,6 @@
                                 </div>
                             @endforeach
                         </div>
-
-                        
                         @if ($article->images->count() > 1)
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -33,11 +40,9 @@
                         @endif
                     </div>
                 @else
-                    
                     <img src="https://picsum.photos/400" class="d-block w-100 rounded shadow" alt="{{ __('ui.no_image') }}">
                 @endif
             </div>
-
             <div class="col-12 col-md-6 mb-3 height-custom text-center">
                 <h2 class="display-5"><span class="fw-bold">{{ __('ui.title') }}: </span>{{ $article->title }}</h2>
                 <div class="d-flex flex-column justify-content-center h-75">
@@ -45,12 +50,12 @@
                     <h5>{{ __('ui.description') }}:</h5>
                     <p>{{ $article->description }}</p>
                     
-                    <p class="mt-3">
-                        <strong>{{ __('ui.category') }}:</strong> 
-                        <a href="{{ route('byCategory', ['category' => $article->category]) }}">
-                            {{ __("ui." . $article->category->name) }}
-                        </a>
-                    </p>
+                        <p class="mt-3">
+                            <strong>{{ __('ui.category') }}:</strong> 
+                            <a href="{{ route('byCategory', ['category' => $article->category]) }}">
+                                {{ __("ui." . $article->category->name) }}
+                            </a>
+                        </p>
                 </div>
             </div>
         </div>

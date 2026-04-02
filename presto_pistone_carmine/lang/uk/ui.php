@@ -24,6 +24,7 @@ return [
     'back.homepage' => 'Back to homepage',
 
     //Account
+     'welcome'=> 'Welcome',
     'account_create'        => 'Create an Account',
     'user_name'             => 'Name',
     'password_confirmation' => 'Confirm Password',
@@ -47,6 +48,7 @@ return [
     'motori'              => 'Motors',
     'salute_e_bellezza'   => 'Health and Beauty',
     'sport'               => 'Sport',
+    'category'=> 'Category',
 
     // Search
     'search_results'      => 'Results for',

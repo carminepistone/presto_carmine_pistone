@@ -1,8 +1,8 @@
 <x-layout>
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding-top: 100px";>
         <div class="row height-custom justify-content-center align-items-center text-center">
-            <div class="col-12">
-                <h1 class="display-1">{{ __('ui.all_articles') }}</h1>
+            <div class="col-12 bg-all">
+                <h1 class="display-3 fw-bold">{{ __('ui.all_articles') }}</h1>
             </div>
         </div>
         <div class="row height-custom justify-content-center align-items-center py-5">
@@ -11,7 +11,7 @@
                     <x-card :article="$article" />
                 </div>
             @empty
-                <div class="col-12">
+                <div class="col-12 bg-all">
                     <h3 class="text-center">
                         {{ __('ui.no_articles') }}
                     </h3>
