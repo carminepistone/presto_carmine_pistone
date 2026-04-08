@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Providers;
-
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -29,6 +30,8 @@ class AppServiceProvider extends ServiceProvider
 
         Paginator::useBootstrapFive();
 
-        
+         Gate::define('is-revisor', function (User $user) {
+            return $user->isRevisor();
+        });
     }
 }
