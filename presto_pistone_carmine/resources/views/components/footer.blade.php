@@ -4,11 +4,13 @@
   <section class="">
     <div class="container text-center text-md-start mt-5 footer-elements">
       <div class="row mt-3">
+        @auth
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-md-start">
           <h5 class="text-uppercase fw-bold mb-4">{{ __('ui.became_revisor') }}</h5>
           <p>{{ __('ui.please_click') }}</p>
           <a href="{{ route('become.revisor') }}" class="btn btn-revisor">{{ __('ui.revisor_button') }}</a>
         </div>
+        @endauth
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <h6 class="text-uppercase fw-bold mb-4">{{ __('ui.useful_links') }}</h6>
           <p><a href="#!" class="text-reset">{{ __('ui.prices') }}</a></p>
@@ -25,8 +27,4 @@
       </div>
     </div>
   </section>
-  {{-- <div class="text-center p-4" style="background-color: ;">
-    © 2026
-    <a class="text-reset text-white fw-bold" href="http://127.0.0.1:8000/">Presto.it</a>
-  </div> --}}
 </footer>

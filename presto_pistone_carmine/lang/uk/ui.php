@@ -70,8 +70,8 @@ return [
     'no_revision'          => 'No articles to review',
 
     // Footer
-    'became_revisor'        => 'Want to become a revisor?',
-    'please_click'          => 'By clicking the button below you will send a request to our admin',
+    'became_revisor'        => 'Work with Us',
+    'please_click'          => 'Want to become a revisor? By clicking the button below, you will send a request to our admin',
     'revisor_button'        => 'Become a Revisor',
     'useful_links'          => 'Useful Links',
     'prices'                => 'Prices',

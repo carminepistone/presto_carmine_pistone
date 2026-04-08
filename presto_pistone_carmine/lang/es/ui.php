@@ -69,8 +69,8 @@ return [
     'no_revision'          => 'No hay artículos para revisar',
 
     // Footer
-    'became_revisor'       => '¿Quieres convertirte en revisor?',
-    'please_click'         => 'Al hacer clic en el botón de abajo enviarás una solicitud a nuestro administrador',
+    'became_revisor'       => 'Trabaja con Nosotros',
+    'please_click'         => '¿Quieres convertirte en revisor? Haciendo clic en el botón de abajo, enviarás una solicitud a nuestro administrado',
     'revisor_button'       => 'Conviértete en Revisor',
     'useful_links'         => 'Enlaces Útiles',
     'prices'               => 'Precios',

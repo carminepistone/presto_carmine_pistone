@@ -73,8 +73,8 @@ return [
 
 
     //Footer
-    'became_revisor'=> 'Vuoi diventare revisore?',
-    'please_click'=> 'Cliccando il bottone sottostante farai richiesta al nostro admin',
+    'became_revisor'=> 'Lavora con Noi',
+    'please_click'=> 'Vuoi diventare revisore? Cliccando il bottone sottostante farai richiesta al nostro admin',
     'revisor_button'=> 'Diventa Revisore',
     'useful_links'=> 'Link Utili',
     'prices'=> 'Prezzi',
