@@ -1,5 +1,10 @@
 <form class="form-custom shadow rounded p-4 my-4" wire:submit="save">
     <div class="mb-3">
+            @if (session()->has('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+         @endif
         <label for="title" class="form-label">{{ __('ui.title') }}:</label>
         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" wire:model.blur="title">
         @error('title')

@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 
 class RevisorController extends Controller
 {
@@ -36,6 +37,26 @@ public function reject(Article $article)
           ->with('message',"Hai rifiutato l'articolo $article->title");
 }
 
+
+// App\Http\Controllers\ArticleController.php o RevisorController.php
+
+public function destroy(Article $article)
+{
+
+    if (!Auth::user()->is_revisor) {
+        abort(403, 'Azione non autorizzata.');
+    }
+
+
+    foreach($article->images as $image) {
+        Storage::delete($image->path);
+    }
+
+
+    $article->delete();
+
+    return redirect()->route('homepage')->with('message', 'Articolo eliminato con successo.');
+}
 
 public function becomeRevisor()
 {

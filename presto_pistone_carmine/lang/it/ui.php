@@ -70,6 +70,8 @@ return [
     'accept'               => 'Accetta',
     'reject'               => 'Rifiuta',
     'no_revision'          => 'Nessun articolo da revisionare',
+    'delete_article'       => 'Elimina Articolo',
+    'delete'=> 'Elimina',
 
 
     //Footer

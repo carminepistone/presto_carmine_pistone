@@ -68,6 +68,8 @@ return [
     'accept'               => 'Accept',
     'reject'               => 'Reject',
     'no_revision'          => 'No articles to review',
+    'delete_article'       => 'Delete Article',
+    'delete'=> 'Delete',
 
     // Footer
     'became_revisor'        => 'Work with Us',

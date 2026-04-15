@@ -67,6 +67,8 @@ return [
     'accept'               => 'Aceptar',
     'reject'               => 'Rechazar',
     'no_revision'          => 'No hay artículos para revisar',
+    'delete_article'       => 'Eliminar artículo',
+    'delete'=> 'Eliminar',
 
     // Footer
     'became_revisor'       => 'Trabaja con Nosotros',

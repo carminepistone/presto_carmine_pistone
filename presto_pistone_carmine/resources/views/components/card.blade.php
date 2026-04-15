@@ -10,7 +10,7 @@
                 {{ __('ui.detail') }}
             </a>
             
-            {{-- Pulsante Categoria (Tradotto Dinamicamente) --}}
+            {{-- Pulsante Categoria --}}
             <a href="{{ route('byCategory', ['category' => $article->category]) }}" class="btn btn-category">
                 {{ __("ui." . $article->category->name) }}
             </a>

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @stack('style')
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Presto</title>
 </head>
 
@@ -17,10 +18,10 @@
     <x-navbar />
 
         <main style="min-height:100vh">{{ $slot }}</main>
-    
+        
 
     <x-footer />
 
-
+    @stack('scripts')
 </body>
 </html>
