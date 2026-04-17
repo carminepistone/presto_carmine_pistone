@@ -51,7 +51,7 @@ public function destroy(Article $article)
     }
 
 
-    if ($article->images) {
+    if ($article->images->isNotEmpty()) {
         foreach ($article->images as $image) {
             Storage::disk('public')->delete($image->path);
         }
